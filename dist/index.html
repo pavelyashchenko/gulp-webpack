@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My project</title>
+    <link rel="stylesheet" href="css/index.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__desktop">
+        <div class="header__container">
+          <div class="header__left"><a class="header__logo" href="index.html"><img src="img/icons/logo.svg" alt="Logo"/></a>
+            <nav class="header__menu">
+              <ul class="header__menu-ul">
+                <li class="header__menu-li"><a class="header__menu-link link-underline" href="index.html#about">About us</a></li>
+                <li class="header__menu-li"><a class="header__menu-link link-underline" href="index.html#how-it-works">How it works</a></li>
+                <li class="header__menu-li"><a class="header__menu-link link-underline" href="index.html#roadmap">Roadmap</a></li>
+                <li class="header__menu-li"><a class="header__menu-link link-underline" href="index.html#contacts">Contacts</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__right">
+            <div class="header__button">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__mobile">
+        <div class="header__mobile-top">
+          <div class="header__left"><a class="header__logo" href="#"><img src="img/icons/logo.svg" alt="Logo"/></a></div>
+          <div class="header__right">
+            <button class="header__right-metamask" data-izimodal-open="#modal-connect"><img src="img/icons/metamask.svg" alt="Metamask button"/></button>
+            <div class="header__burger-button">
+              <button>
+                <svg>
+                  <defs>
+                    <filter id="gooeyness">
+                      <fegaussianblur in="SourceGraphic" stdDeviation="2.2" result="blur"></fegaussianblur>
+                      <fecolormatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="gooeyness"></fecolormatrix>
+                      <fecomposite in="SourceGraphic" in2="gooeyness" operator="atop"></fecomposite>
+                    </filter>
+                  </defs>
+                </svg>
+                <button class="plates">
+                  <div class="plate plate5" onclick="this.classList.toggle('active')">
+                    <svg class="burger" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+                      <path class="line line1" d="M 30,35 H 70 "></path>
+                      <path class="line line2" d="M 50,50 H 30 L 34,32"></path>
+                      <path class="line line3" d="M 50,50 H 70 L 66,68"></path>
+                      <path class="line line4" d="M 30,65 H 70 "></path>
+                    </svg>
+                    <svg class="x" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+                      <path class="line" d="M 34,32 L 66,68"></path>
+                      <path class="line" d="M 66,32 L 34,68"></path>
+                    </svg>
+                  </div>
+                </button>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="header__mobile-inner">
+          <nav class="header__menu">
+            <ul class="header__menu-ul">
+              <li class="header__menu-li"><a class="header__menu-link" href="index.html#about">About us</a></li>
+              <li class="header__menu-li"><a class="header__menu-link" href="index.html#how-it-work">How it work</a></li>
+              <li class="header__menu-li"><a class="header__menu-link" href="index.html#roadmap">Roadmap</a></li>
+              <li class="header__menu-li"><a class="header__menu-link" href="index.html#contacts">Contacts</a></li>
+            </ul>
+          </nav>
+          <div class="header__button">
+          </div>
+          <div class="header__social"><a class="header__social-item" href="#" target="_blank"><img src="img/icons/twitter.svg" alt="Twitter"/></a><a class="header__social-item" href="#" target="_blank"><img src="img/icons/post.svg" alt="Post"/></a><a class="header__social-item" href="#" target="_blank"><img src="img/icons/telegram.svg" alt="Telegram"/></a><a class="header__social-item" href="#" target="_blank"><img src="img/icons/discord.svg" alt="Discord"/></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="intro">
+        <h1>Hello World!</h1>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__left"> <a class="footer__logo" href="index.html"><img src="img/icons/logo.svg" alt="Logo footer"/></a>
+          <div class="footer__info"><img src="img/icons/powered-by.svg" alt="Binance smart chain logo"/></div>
+        </div>
+        <div class="footer__center">
+          <nav class="footer__menu">
+            <ul class="footer__menu-ul">
+              <li class="footer__menu-li"><a class="footer__menu-link" href="index.html#about">About Us</a></li>
+              <li class="footer__menu-li"><a class="footer__menu-link" href="index.html#pass">Aura Pass</a></li>
+            </ul>
+            <ul class="footer__menu-ul">
+              <li class="footer__menu-li"><a class="footer__menu-link" href="index.html#how-it-works">How it works</a></li>
+              <li class="footer__menu-li"><a class="footer__menu-link" href="index.html#benefits">Benefits</a></li>
+            </ul>
+            <ul class="footer__menu-ul">
+              <li class="footer__menu-li"><a class="footer__menu-link" href="index.html#roadmap">Roadmap</a></li>
+              <li class="footer__menu-li"><a class="footer__menu-link" href="index.html#levels">Levels</a></li>
+            </ul>
+            <ul class="footer__menu-ul">
+              <li class="footer__menu-li"><a class="footer__menu-link" href="index.html#team">Contacts</a></li>
+              <li class="footer__menu-li"><a class="footer__menu-link" href="index.html#faq">FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__right"> <span class="footer__follow">Follow Us:</span>
+          <div class="footer__icons"><a class="footer__icons-item" href="#" target="_blank"><img src="img/icons/footer-twitter.svg" alt="Twitter"/></a><a class="footer__icons-item" href="#" target="_blank"><img src="img/icons/footer-post.svg" alt="Post"/></a><a class="footer__icons-item" href="#" target="_blank"><img src="img/icons/footer-telegram.svg" alt="Telegram"/></a><a class="footer__icons-item" href="#" target="_blank"><img src="img/icons/footer-discord.svg" alt="Discord"/></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

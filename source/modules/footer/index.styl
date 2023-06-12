@@ -1,0 +1,151 @@
+.footer
+  background-color $bg
+  flex-shrink 0
+
+.footer__inner
+  display flex
+  align-items center
+  justify-content space-between
+  max-width 1036px
+  margin 0 auto
+  padding 7.5rem 15px 9rem
+
+.footer__left
+  max-width 250px
+  margin-right 5rem
+
+.footer__logo
+  margin-bottom 2rem
+
+.footer__logo img
+  max-width 100%
+  width 200px
+
+.footer__info
+  img
+    width 100%
+
+.footer__icons
+  display flex 
+  align-items center
+  justify-content space-between
+
+  &-item
+    display block
+    transition all 0.3s
+    width 25px
+    height 25px
+
+    img
+      width 100%
+
+    &:not(:first-child)
+      margin-left 1rem
+
+    &:hover
+      transform scale(1.2)
+
+.footer__center
+  max-width 500px
+  width 100%
+
+.footer__right
+  display flex
+  align-items center
+  justify-content space-between
+
+.footer__follow
+  font-weight 300
+  font-size 1.6rem
+  line-height 1.9rem
+  white-space nowrap
+  margin-right 10px
+
+.footer__menu
+  display flex
+  align-items flex-start
+  justify-content space-between
+
+  &-ul
+    width 30%
+
+  &-li
+    margin-bottom 0.5rem
+
+  &-link
+    font-weight 300
+    font-size 1.4rem
+    line-height 2
+    color $white
+    transition color 0.3s
+
+    &:hover
+      color $green
+
+@media (max-width 1024px)
+  .footer__menu
+    &-ul
+      width 80px
+
+  .footer__center
+    max-width 380px
+
+@media (max-width 768px)
+  .footer__logo img
+    width 160px
+
+  .footer__menu
+    flex-wrap wrap
+
+    &-ul
+      width 50%
+
+    &-link
+      font-size 14px
+
+  .footer__info
+    font-size 14px
+    line-height 1.5
+
+  .footer__center
+    max-width 200px
+
+  .footer__follow
+    font-size 16px
+    line-height 19px
+    margin-right 12px
+
+  .footer__icons-item:not(:first-child)
+    margin-left 1rem
+
+@media (max-width 650px)
+  .footer__inner
+    flex-direction column
+    align-items flex-start
+
+  .footer__left
+    order 2
+    margin-right 0
+
+  .footer__center
+    max-width 100%
+    margin-bottom 40px
+
+  .footer__menu-ul
+    width 25%
+
+  .footer__right
+    margin-bottom 50px
+
+  .footer__logo img
+    width 120px
+
+@media (max-width 425px)
+  .footer__menu
+    flex-wrap wrap
+
+    &-ul
+      width 50%
+
+      &:nth-child(-n+2)
+        margin-bottom 20px

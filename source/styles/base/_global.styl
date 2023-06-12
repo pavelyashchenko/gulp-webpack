@@ -1,0 +1,137 @@
+@import "_fonts"
+@import "_vars"
+@import "../../modules/header/index.styl"
+@import "../../modules/footer/index.styl"
+@import "../../modules/button/index.styl"
+@import "../../modules/pictures/index.styl"
+@import "../../modules/modals/index.styl"
+
+$font = "UA-brand-regular", sans-serif
+
+html
+  height 100%
+  box-sizing border-box
+  scroll-behavior smooth
+
+*,
+*::before,
+*::after
+  box-sizing inherit
+  padding 0
+  margin 0
+
+body
+  display flex
+  flex-direction column
+  height 100%
+  font-family $font
+  font-weight 400
+  background-color $bg
+  color $white
+  overflow-x hidden
+
+main
+  flex 1 0 auto
+
+a
+  display inline-block
+  text-decoration none
+  color $link
+  outline none
+
+  &:focus-visible
+    outline solid
+
+p,
+span,
+ul,
+ol,
+li,
+input,
+textarea
+  font-family $font
+  color $text
+
+ul,
+li,
+ol
+  list-style none
+  padding 0
+  margin 0
+
+h1,
+h2,
+h3,
+h4
+  font-family $fontBold
+  font-weight 500
+  margin 0
+  padding 0
+  color $title
+
+h1
+  font-size 5rem
+  line-height 6rem
+  font-weight 700
+
+h2
+  font-size 4rem
+  line-height 4.8rem
+
+h3
+  font-size 2rem
+
+h4
+  font-size 1.6rem
+
+button
+  border none
+  outline none
+  cursor pointer
+  background-color transparent
+  color $white
+  transition all 0.1s
+
+  &:focus-visible
+    outline solid
+
+.main
+  overflow hidden
+
+.scroll-block
+  overflow hidden
+
+.link-underline
+  position relative
+
+  &::after
+    position absolute
+    content ""
+    bottom 2px
+    right 0
+    height 2px
+    width 0
+    background-color $white
+    transition width 0.3s
+
+  &:hover
+    &::after
+      width 100%
+      left 0
+
+.section-title
+  font-family $fontBold
+  font-size 4.5rem
+  line-height 5.6rem
+  text-shadow 4px 4px 0px #0C53BD
+
+@media (max-width 768px)
+  .header__button
+    .button
+      font-size 1.7rem !important
+      padding 1rem 2.5rem !important
+
+@media (max-width 650px)
+  .button
+    font-size 14px !important
+    padding 2rem 3rem !important

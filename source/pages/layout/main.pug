@@ -1,0 +1,30 @@
+include ../../modules/header/index
+include ../../modules/footer/index
+include ../../modules/button/index
+include ../../modules/pictures/index
+include ../../modules/modals/index
+
+doctype html
+html(lang="en")
+  head
+    - var title
+
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    
+    block head
+    
+    title= title
+
+    block styles
+
+  body
+    +header()
+
+    main.main
+      block main
+
+    +footer()
+
+    block scripts

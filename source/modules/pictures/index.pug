@@ -1,0 +1,43 @@
+mixin picture(data)
+  -
+    var data = data || {}
+    var lazy = data.lazy || false
+    var mainAttributes = data.mainAttr
+    var attributes = data.attr
+    var path = data.path || ""
+    var name = data.name || path.substring(path.lastIndexOf('/') + 1).split(".").slice(0, -1).join(".");
+    const imgPath = path.substring(0, path.length - 4)
+    const imgFormat = path.slice(-3);
+    const imgFormatWebp = "webp";
+    const imageData = [];
+
+    if (imgFormat === "svg") {
+      imageData.push({
+        type: "svg+xml",
+        source: `${imgPath}.${imgFormat}`
+      })
+    } else if (imgFormat === "png" || imgFormat === "jpg") {
+      imageData.push({
+        type: imgFormatWebp,
+        source: `${imgPath}.${imgFormatWebp} 1x, ${imgPath}@2x.${imgFormatWebp} 2x`
+      })
+    }
+
+  picture&attributes(mainAttributes).picture
+    - for (var i = imageData.length - 1; i >= 0; i--)
+      if lazy
+        source(data-srcset= imageData[i].source type=`image/${imageData[i].type}` class="lazyload")
+      else
+        source(srcset= imageData[i].source type=`image/${imageData[i].type}`)
+
+    - if (imgFormat === "svg")
+      if lazy
+        img(src="/" data-src= imageData[0].source, alt= name class="lazyload")&attributes(attributes)
+      else
+        img(src= imageData[0].source, alt= name)&attributes(attributes)
+
+    - if (imgFormat === "png" || imgFormat === "jpg")
+      if lazy
+        img(src="/" data-src=`${imgPath}.${imgFormat}`, data-srcset=`${imgPath}@2x.${imgFormat} 2x`, alt= name class="lazyload")&attributes(attributes)
+      else
+        img(src=`${imgPath}.${imgFormat}`, srcset=`${imgPath}@2x.${imgFormat} 2x`, alt= name)&attributes(attributes)

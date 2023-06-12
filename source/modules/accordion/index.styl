@@ -1,0 +1,77 @@
+.accordion
+  text-align left
+  margin-bottom 4rem
+
+ul[role="tablist"]
+  display flex
+  align-items center
+  flex-wrap wrap
+
+.accordion__title
+  font-size 16px
+  line-height 24px
+  letter-spacing 0.01em
+  color $text
+  display block
+  position relative
+
+  &:hover
+    text-decoration none
+
+  .accordion__title-decoration
+    display none
+
+  &[aria-selected="true"]
+    opacity 1
+
+.accordion__title h3
+  position relative
+  display block
+  font-weight 400
+  font-size 2rem
+  line-height 3rem
+
+.accordion__item
+  max-width 25%
+  padding 19px 15px 25px 25px
+  transition margin 0.2s
+
+  &.is-active
+    background radial-gradient(145.16% 113.2% at -3.45% -2.44%, #0057FF 0.09%, rgba(55, 48, 135, 0.8) 38.29%, rgba(31, 22, 53, 0.4) 71.54%, rgba(35, 23, 47, 0) 99.48%, rgba(30, 21, 48, 0) 99.49%)
+
+    &:last-child
+      margin-bottom 0
+
+.accordion-list
+  margin 10px 0 10px 15px
+
+.accordion__body
+  display none
+  font-weight 300
+  font-size 1.4rem
+  line-height 1.5
+  padding 12px 0 6px 0
+  max-width 600px
+  margin-right 20px
+
+  p:last-child
+    margin-bottom 0
+
+  ol
+    padding-left 15px
+    margin-top 12px
+    margin-bottom 12px
+
+.faq__hidden-blocks
+  display flex
+
+@media (max-width 768px)
+  .accordion__title
+    h3
+      font-size 18px
+
+  .accordion__body
+    font-size 14px
+
+  .accordion__item
+    max-width 100%

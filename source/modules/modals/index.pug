@@ -1,0 +1,59 @@
+mixin modal-connect(data) 
+  .modal.modal-connect#modal-connect
+    button.modal-close(data-izimodal-close="")
+      img(src="img/modals/modal-close-icon.svg", alt="Close")
+    .modal-connect-inner
+      h2.modal-connect-image
+        img(src="img/modals/metamask-modal.png", alt="Metamask Picture")
+      
+      .modal-connect-button
+        +button(type="button").button--red-filled
+          | Connect Wallet
+
+mixin modal-error-accept(data) 
+  .modal.modal-error-accept#modal-error-accept
+    button.modal-close(data-izimodal-close="")
+      img(src="img/modals/modal-close-icon.svg", alt="Close")
+    .modal-error-accept-inner
+      h2.modal-error-accept-title Tittle error
+      p.modal-error-accept-message
+        | Contrary to&nbsp;popular belief, Lorem Ipsum is&nbsp;not simply random text. It&nbsp;has roots in&nbsp;a&nbsp;piece of&nbsp;classical Latin literature from 45&nbsp;BC, making it&nbsp;over 2000 years old. Richard McClintock, a&nbsp;Latin professor at&nbsp;Hampden-Sydney College in&nbsp;Virginia, looked up&nbsp;one of&nbsp;the more obscure
+      .modal-error-accept-buttons
+        h4.modal-error-accept-buttons-title Are you sure you want to continue?
+        .modal-error-accept-buttons-inner
+          +button(type="button").button-filled
+            | Yes
+          +button(type="button" data-izimodal-close="").button--red
+            | Cancel
+
+mixin modal-error(data) 
+  .modal.modal-error#modal-error
+    button.modal-close(data-izimodal-close="")
+      img(src="img/modals/modal-close-icon.svg", alt="Close")
+    .modal-error-inner
+      h2.modal-error-title Error
+      p.modal-error-message
+        | It is a worldwide blockchain ecosystem that brings together several cutting-edge technologies, including NFT and fintech. You are aware that the cryptocurrency business has entered a new phase with endless opportunities for growth with the introduction of non-fungible tokens. As a result, we are combining two massive ecosystems, namely fintech and NFT finance, to develop a new form of blockchain bank system.
+      .modal-error-button
+        +button(type="button" data-izimodal-close="").button--red-filled
+          | Close
+
+mixin modal-success(data) 
+  .modal.modal-success#modal-success
+    button.modal-close(data-izimodal-close="")
+      img(src="img/modals/modal-close-icon.svg", alt="Close")
+    .modal-success-inner
+      h2.modal-success-title Success
+    .modal-success-button
+      +button(type="button" data-izimodal-close="").button--red-filled
+        | Close
+
+mixin modal-processing(data) 
+  .modal.modal-processing#modal-processing
+    button.modal-close(data-izimodal-close="")
+      img(src="img/modals/modal-close-icon.svg", alt="Close")
+    .modal-success-inner
+      h2.modal-processing-title Processing<br> Transaction...
+    .modal-processing-button
+      +button(type="button" data-izimodal-close="").button--red-filled
+        | Close

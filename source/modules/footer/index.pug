@@ -1,0 +1,38 @@
+mixin footer()
+  footer.footer
+    .footer__inner
+      .footer__left 
+        a.footer__logo(href="index.html")
+          img(src="img/icons/logo.svg", alt="Logo footer")
+        .footer__info
+          img(src="img/icons/powered-by.svg", alt="Binance smart chain logo")
+
+      .footer__center
+        nav.footer__menu
+          ul.footer__menu-ul
+            li.footer__menu-li
+              a.footer__menu-link(href="index.html#about") About Us
+            li.footer__menu-li
+              a.footer__menu-link(href="index.html#pass") Aura Pass
+          ul.footer__menu-ul
+            li.footer__menu-li
+              a.footer__menu-link(href="index.html#how-it-works") How it works
+            li.footer__menu-li
+              a.footer__menu-link(href="index.html#benefits") Benefits
+          ul.footer__menu-ul
+            li.footer__menu-li
+              a.footer__menu-link(href="index.html#roadmap") Roadmap
+            li.footer__menu-li
+              a.footer__menu-link(href="index.html#levels") Levels
+          ul.footer__menu-ul
+            li.footer__menu-li
+              a.footer__menu-link(href="index.html#team") Contacts
+            li.footer__menu-li
+              a.footer__menu-link(href="index.html#faq") FAQ
+
+      .footer__right 
+        span.footer__follow Follow Us:
+        .footer__icons
+          each key, value in {'img/icons/footer-twitter.svg': 'Twitter', 'img/icons/footer-post.svg': 'Post', 'img/icons/footer-telegram.svg': 'Telegram', 'img/icons/footer-discord.svg': 'Discord'}
+            a.footer__icons-item(href="#" target="_blank")
+              img(src=value, alt=key)

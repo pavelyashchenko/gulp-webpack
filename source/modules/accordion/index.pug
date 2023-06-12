@@ -1,0 +1,22 @@
+mixin accordion()
+	.accordion(aria-multiselectable="true" role="tabpanel")
+		ul(role="tablist")
+			block
+
+mixin accordion-item(title, isSelected, decoration, attributes)
+	- 
+		let selected;
+		
+		if (isSelected) selected = "true"
+		else selected = "false"
+		
+	li.accordion__item(role="presentation")
+		a.accordion__title(href="#" role="tab" aria-selected=selected aria-expanded=selected tabindex="0")&attributes(attributes)
+			if (decoration == true)
+				span.accordion__title-decoration
+					| <svg xmlns="http://www.w3.org/2000/svg" width="9" height="10" viewBox="0 0 9 10"><path fill="#FF9000" d="M9 5l-9 5V0z"/></svg>
+				
+			| !{title}
+				
+		.accordion__body
+			block

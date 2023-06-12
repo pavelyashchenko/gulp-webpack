@@ -1,0 +1,277 @@
+.header
+  position fixed
+  left 0
+  right 0
+  z-index 100
+
+.header__desktop
+  padding 40px 15px 0 15px
+  transition padding 0.5s, box-shadow 0.5s
+
+  &.is-fixed
+    padding 1rem 15px
+    box-shadow 0px 40px 60px rgba(0, 0, 0, 0.4)
+    backdrop-filter blur(16px)
+
+  .header__container
+    display flex
+    align-items center
+    justify-content space-between
+    max-width 1255px
+    margin 0 auto
+
+  .header__left
+    display flex
+    align-items center
+    justify-content space-between
+    max-width 100%
+    width 100%
+
+  .header__menu
+    margin 0 auto
+
+  .header__right
+    flex-shrink 0
+
+  .header__logo
+    margin-right 4rem
+
+    img
+      width 177px
+
+  .header__menu
+    &-ul
+      display flex
+      align-items center
+
+    &-li
+      padding 0 1.4rem
+
+    &-link
+      padding 1.5rem 0 1.7rem
+      color #E7D0D0
+      font-size 1.4rem
+      line-height 1.7rem
+
+.header__mobile
+  display none
+  position relative
+
+  .header__mobile-top
+    display flex
+    position fixed
+    top 10px
+    left 0
+    right 0
+    align-items center
+    justify-content space-between
+    padding 0 15px
+    max-width 650px
+    margin 0 auto
+    z-index 100
+    transition top 0.3s, box-shadow 0.5s
+    overflow hidden
+    height 60px
+
+    .header__logo
+      img
+        max-width 140px
+
+    .header__right
+      display flex
+      align-items center
+
+    .header__right-metamask
+      img
+        max-width 100%
+
+    .header__burger-button
+      svg
+        position absolute
+        left 0
+        height 80px
+        width 80px
+
+      .plates
+        position relative
+        width 80px
+        height 80px
+
+      .plate
+        position absolute
+        top 0
+        left 0
+        height 80px
+        width 80px
+
+      .burger
+        filter url("#gooeyness")
+
+      .x
+        transform scale(0)
+        transition transform 400ms
+
+        .line
+          stroke-width 5.5px
+
+      .line
+        fill none
+        stroke #C4C4C4
+        stroke-width 6px
+        stroke-linecap round
+        stroke-linejoin round
+        transform-origin 50%
+        transition stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms
+
+      .active
+        .x
+          transform scale(1)
+          transition transform 400ms 350ms
+
+        &.plate5
+          .line
+            transition stroke-dasharray 400ms, stroke-dashoffset 400ms, transform 400ms
+
+          .line1
+            stroke-dasharray 1 40
+            stroke-dashoffset -33px
+
+          .line2
+            stroke-dasharray 5 39
+            stroke-dashoffset -37px
+
+          .line3
+            stroke-dasharray 5 39
+            stroke-dashoffset -37px
+
+          .line4
+            stroke-dasharray 1 40
+            stroke-dashoffset -33px
+
+          .x
+            transition transform 400ms 50ms
+
+      .plate5
+        .line
+          transition stroke-dasharray 400ms 100ms, stroke-dashoffset 400ms 100ms, transform 400ms 100ms
+
+        .line1
+          stroke-dasharray 40 40
+
+        .line2
+          stroke-dasharray 21 39
+
+        .line3
+          stroke-dasharray 21 39
+
+        .line4
+          stroke-dasharray 40 40
+
+        .x
+          transition transform 400ms 50ms
+
+  .header__mobile-inner
+    position fixed
+    top -100%
+    display flex
+    flex-direction column
+    align-items center
+    justify-content space-between
+    padding 120px 65px 124px 64px
+    height 100%
+    width 100%
+    background radial-gradient(121.48% 131.8% at 84.71% -31.8%, #0057FF 0.09%, rgba(55, 48, 135, 0.8) 38.29%, rgba(31, 22, 53, 0.4) 71.54%, rgba(35, 23, 47, 0) 99.48%, rgba(30, 21, 48, 0) 99.49%)
+    background-color $bg
+    z-index 99
+    transition top 0.5s, visibility 0.5s
+    visibility hidden
+    overflow auto
+
+    .header__menu
+      width 100%
+      text-align center
+      margin-top 60px
+
+      &-link
+        width 100%
+        padding 3rem 0
+        font-weight 400
+        font-size 2.6rem
+        line-height 3.1rem
+        color $text
+
+    .header__button
+      margin-bottom 6rem
+
+      .button
+        font-size 18px !important
+        line-height 22px !important
+        padding 9px 20px !important
+        min-width 170px
+
+    .header__social
+      display flex
+      align-items center
+      justify-content space-between
+
+      &-item
+        display block
+        transition all 0.3s
+        width 30px
+        height 30px
+
+        &:not(:first-child)
+            margin-left 15px
+
+        img
+          width 100%
+
+          &:hover
+            transform scale(1.2)
+
+  &.is-fixed
+    .header__mobile-top
+      top 0
+      box-shadow 0px 40px 60px rgba(0, 0, 0, 0.4)
+      backdrop-filter blur(16px)
+
+  &.is-active
+    .header__mobile-inner
+      visibility visible
+      top 0
+
+    &.is-fixed
+      .header__mobile-top
+        box-shadow none
+        backdrop-filter none
+
+@media (max-width 1024px)
+  .header__desktop
+    .header__logo
+      img
+        width 150px
+
+    .header__menu
+      &-li
+        padding 0 1.5rem
+
+      &-link
+        font-size 12px
+
+@media (max-width 768px)
+  .header__desktop
+    .header__logo
+      margin-right 3rem
+
+      img
+        width 120px
+
+    .header__button
+      margin-right 2rem
+
+@media (max-width 650px)
+  .header__desktop
+    display none
+
+  .header__mobile
+    display flex

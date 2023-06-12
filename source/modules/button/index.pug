@@ -1,0 +1,24 @@
+mixin button(attributes)
+  -
+    let buttonTag = "span";
+    let classes = [];
+    const baseClassName = "button";
+    const isLink = attributes.href || null;
+    const isFormButton = attributes.type || null;
+    const isDisabled = attributes.disabled;
+
+    classes.push(baseClassName);
+    
+    // Detect button tag by Attribute
+    if (isLink) {
+      buttonTag = "a";
+    } else if (isFormButton) {
+      buttonTag = "button";
+    }
+    
+    if (isDisabled) {
+      classes.push("is-disabled");
+    }
+
+  #{buttonTag}(class=classes)&attributes(attributes)
+    block
